@@ -16,16 +16,3 @@ Esta é uma API desenvolvida em .NET para um sistema escolar que permite o geren
 - **JSON Web Tokens (JWT)**: Autenticação e autorização de endpoints.
 - **Swagger**: Documentação interativa da API.
 
-## Configuração
-
-1. Clone este repositório em sua máquina local.
-
-   ```bash
-   git clone https://github.com/seu-usuario/sua-api-escolar.git
-2. Abra o projeto em seu ambiente de desenvolvimento preferido (por exemplo, Visual Studio ou Visual Studio Code).
-
-Configure sua conexão com o banco de dados SQL Server no arquivo appsettings.json:
-```bash
-"ConnectionStrings": {
-    "DefaultConnection": "SuaConnectionString"
-}
