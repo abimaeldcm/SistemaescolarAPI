@@ -19,9 +19,10 @@ namespace Sistema_escolar.Business.DisciplinasAlunos
             _mapper = mapper;
         }
 
-        public List<Disciplinas> BuscarTodos(string materia)
+        public List<AlunoDTO> BuscarTodos(string materia)
         {
-            return _acessoBanco.BuscarTodos(materia);
+            var alunosMateria = _acessoBanco.BuscarTodos(materia);
+            return _mapper.Map<List<AlunoDTO>>(alunosMateria);
         }
 
         public Disciplinas BuscarPorId(int id)

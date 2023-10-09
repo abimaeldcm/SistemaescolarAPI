@@ -18,7 +18,7 @@ namespace Sistema_escolar.Controllers
         }
 
         [HttpGet("{materia}")]
-        public ActionResult<List<Disciplinas>> AlunosMatriculados( string materia)
+        public ActionResult<List<AlunoDTO>> AlunosMatriculados( string materia)
         {
             return _regras.BuscarTodos(materia);
         }

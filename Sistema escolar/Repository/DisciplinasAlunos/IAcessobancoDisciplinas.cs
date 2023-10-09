@@ -5,7 +5,7 @@ namespace Sistema_escolar.Repository.DisciplinasAlunos
 {
     public interface IAcessobancoDisciplinas
     {
-        List<Disciplinas> BuscarTodos(string materia);
+        List<Aluno> BuscarTodos(string materia);
         Disciplinas BuscarPorId(int id);
         Disciplinas Adionar(Disciplinas novoAluno);
         Disciplinas Editar(Disciplinas Aluno, Disciplinas AlunoDb);

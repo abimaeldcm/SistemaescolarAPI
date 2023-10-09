@@ -26,9 +26,15 @@ namespace Sistema_escolar.Repository.Alunos
             throw new System.NotImplementedException();
         }
 
-        public List<Disciplinas> BuscarTodos(string materia)
+        public List<Aluno> BuscarTodos(string materia)
         {
-                var a = _BancoContext.Disciplinas.Where(x => x.Nome == materia).Count();
+            var AlunosNaDisciplina = _BancoContext.Disciplinas.Where(x => x.Nome == materia).Include(x => x.Aluno).ToList();
+            List<Aluno> Alunos = new List<Aluno>(); 
+            foreach (var aluno in AlunosNaDisciplina)
+            {
+                Alunos.Add(aluno.Aluno);
+            }
+            return Alunos;
         }
 
         public Disciplinas Editar(Disciplinas Aluno, Disciplinas AlunoDb)
